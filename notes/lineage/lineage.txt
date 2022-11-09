@@ -1,0 +1,42 @@
+/*
+function trace_lineage() {
+	
+	var cursor = [0,0,0,0]
+	for ( var i = 0; i < argument_count-1; i ++) {
+		cursor = argument[i].traceCursor(cursor[0],cursor[1],argument[i+1])
+	}
+	
+	cursor[2] = window_width - cursor[0]
+	cursor[3] = window_height - cursor[1]
+	
+	
+	print(cursor[0])
+	print(cursor[1])
+	
+	return cursor
+}
+*/
+
+
+
+/*
+	static traceCursor = function(x,y,id) {
+		
+		// set the cursor position
+		traceCursor = [ innerX1 + x + margin[cX], innerY1 + y + margin[cY] ]
+		
+		// perform cursor calls and add cursor padding for all the elements.
+		for (var i = 0; i < array_length(elements); i ++) {
+			traceCursor = elements[i].adjustCursor(traceCursor[cX], traceCursor[cY])
+			
+			if elements[i] = id break
+			traceCursor[cY] += paddingList[i]
+		}
+		
+		// push on the REMAINING SPACE
+		array_push(traceCursor,traceCursor[cX] - width)
+		array_push(traceCursor,traceCursor[cY] - height)
+		
+		return traceCursor
+	}
+	*/

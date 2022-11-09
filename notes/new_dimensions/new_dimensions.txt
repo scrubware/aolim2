@@ -1,0 +1,13 @@
+
+
+VARIABLES:
+
+width
+height
+
+that is all!
+
+
+VARIABLES WE FETCH FROM OTHERS:
+
+parentFrame.paddedWidth (parentFrame.width - margin[0]*2

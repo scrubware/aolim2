@@ -1,0 +1,48 @@
+
+messages look compact when constructed this way.
+
+function ChatMessage(user,message,time,compact = false) : UiBase() constructor {
+	
+	//new_temporary_scope()
+	
+	print(get_element_scope_length())
+	
+	self.user = user
+	self.message = message
+	self.time = time
+	
+	frame = new Frame(infinity,32,0)
+	frame.elementStartDirection = horizontal
+	frame.drawSelf = function() {}
+	frame.elementPadding = 10
+	
+	
+	userIcon = new Icon(35,c_black,4,spr_portraits,user.portrait,1,user.color)
+	userName = new TextElement("[" + color_to_hex_string(user.color,0) + "]" + user.name)
+	
+	timeText = new TextElement(time.toString())
+	
+	//var e;
+	
+	//e = new LayoutSwitch(true)
+	
+	//e = new Padding(55,20)
+	
+	text = new TextElement(message)
+	with text {
+		draw = function(x,y) {
+		
+			pos = move(x,y)
+		
+			scribbleText = scribble(text).starting_format("fn_bahnscrift",colorSettings.text).animation_speed(0.5).wrap(parentFrame.frameAnchor[x2_] - x - 15)
+			scribbleText.draw(round(pos[X]),round(pos[Y]))
+			
+			
+			parentFrame.idealHeight = (y - parentFrame.frameAnchor[Y1]) + scribbleText.get_height()
+			return adjustCursor(x,y)
+		}
+	}
+	
+	//exit_temporary_scope()
+	
+}
